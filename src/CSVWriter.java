@@ -4,6 +4,9 @@ import java.util.List;
 
 public class CSVWriter {
 
+    /*
+     Funcion que utilizamos para escribir el archivo CSV, por cada objeto en la lista recupeara los valores de cada objeto y se añaden al docuemento separado por "," al terminar el objeto se añade un salto de linea
+     */
     public static void writeToCSV(List<WeatherData> weatherDataList, String fileName) {
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.append("City,Sky State,Temperature,Wind,Precipitation,Humidity,Cloud Coverage\n");
